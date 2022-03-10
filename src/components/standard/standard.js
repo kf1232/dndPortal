@@ -1,5 +1,3 @@
-import {useState} from 'react'
-
 function Standard() {
     return (
         <div className='STANDARD'>

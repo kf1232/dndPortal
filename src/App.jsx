@@ -22,7 +22,6 @@ function App() {
 
 			<button onClick={togglePointbuy}>toggle pointbuy</button>
 			{pointbuy ? null : <Pointbuy/> }
-			
 
 			<button onClick={toggleCustom}>toggle custom</button>
 			{custom ? null : <Custom/> }

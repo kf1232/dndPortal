@@ -1,5 +1,3 @@
-import {useState} from 'react'
-
 function Custom() {
     return (
         <div className='CUSTOM'>
