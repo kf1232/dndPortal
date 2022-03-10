@@ -1,29 +1,29 @@
 import {useState} from 'react'
 
 function Standard() {
-    const [str, set_str] = useState(0)
+    const [str, set_str] = useState(8)
 	const increaseSTR = () => {set_str((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })}
-	const decSTR = () => {set_str((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decSTR = () => {set_str((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 
-	const [dex, set_dex] = useState(0)
+	const [dex, set_dex] = useState(8)
 	const increaseDEX = () => {set_dex((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })} 
-	const decDEX = () => {set_dex((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decDEX = () => {set_dex((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 	
-	const [con, set_con] = useState(0)
+	const [con, set_con] = useState(8)
 	const increaseCON = () => {set_con((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })} 
-	const decCON = () => {set_con((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decCON = () => {set_con((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 
-	const [int, set_int] = useState(0)
+	const [int, set_int] = useState(8)
 	const increaseINT = () => {set_int((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })} 
-	const decINT = () => {set_int((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decINT = () => {set_int((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 		
-	const [wis, set_wis] = useState(0)
+	const [wis, set_wis] = useState(8)
 	const increaseWIS = () => {set_wis((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })} 
-	const decWIS = () => {set_wis((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decWIS = () => {set_wis((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 
-	const [cha, set_cha] = useState(0)
+	const [cha, set_cha] = useState(8)
 	const increaseCHA = () => {set_cha((prev) => { return prev + 1 > 20 ? 20 : prev + 1 })} 
-	const decCHA = () => {set_cha((prev) => { return prev - 1 < 0 ? 0 : prev - 1 })}
+	const decCHA = () => {set_cha((prev) => { return prev - 1 < 8 ? 8 : prev - 1 })}
 
     return (
         <div className='STANDARD'>
