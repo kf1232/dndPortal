@@ -1,34 +1,28 @@
 import {useState, useCallback, useEffect} from 'react'
-const cost = [0, 1, 2, 3, 4, 5, 7, 9]
-
-const STAT_FLOOR = 8
-const STAT_CELING = 15
-
-const STATS = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
-const STR= 0
-const DEX= 1
-const CON= 2
-const INT= 3
-const WIS= 4
-const CHA= 5
-
-function Pointbuy() {
 	// 08 09 10 11 12 13 14 15 16 17 18 19 20   stat
 	// -1 -1  0  0  1  1  2  2  3  3  4  4  5   bonus
-	//  0  1  2  3  4  5  7  9  -  -  -  -  -   cost
+	//  0  1  2  3  4  5  7  9  -  -  -  -  -   COST
+
+const S = [0, 1, 2, 3, 4, 5]
+const COST =[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 7, 9]
+const STAT_FLOOR = 8;                 const STAT_CELING = 15
+
+const STR= 0, DEX= 1, CON= 2, INT= 3, WIS= 4, CHA= 5
+
+function Pointbuy() {
 
 	const [base_stat, set_stat] = useState(new Array(6).fill(STAT_FLOOR))
 	const [point_pool, set_pool] = useState(27)
 
 	useEffect( () => {
-		set_pool(27 - cost[base_stat[STR]-STAT_FLOOR] - cost[base_stat[DEX]-STAT_FLOOR] 
-			        - cost[base_stat[CON]-STAT_FLOOR] - cost[base_stat[INT]-STAT_FLOOR] 
-					- cost[base_stat[WIS]-STAT_FLOOR] - cost[base_stat[CHA]-STAT_FLOOR])
+		set_pool(27 - COST[base_stat[STR]] - COST[base_stat[DEX]] 
+			        - COST[base_stat[CON]] - COST[base_stat[INT]] 
+					- COST[base_stat[WIS]] - COST[base_stat[CHA]])
 	}, [base_stat])
 
 	const alter_stat = useCallback((stat, change) => {
 		if(change > 0)
-			if(point_pool < cost[base_stat[stat]-STAT_FLOOR+1] - cost[base_stat[stat]-STAT_FLOOR])
+			if(point_pool < COST[base_stat[stat]+1] - COST[base_stat[stat]])
 				return
 
 		const new_stats = [...base_stat]
@@ -45,29 +39,36 @@ function Pointbuy() {
 				POINT BUY: {point_pool} / 27
 			</div>
 			<div className='POINTBUY_BODY'>
-				<span>STR: {base_stat[STR]} COST: {cost[base_stat[STR]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(0, 1)}}>+</button>
-				<button onClick={function() {alter_stat(0,-1)}}>-</button><br/>
+				{S.map((obj)=> {
+					<div>
+						<span>STR: {base_stat[obj]} COST: {COST[base_stat[obj]]}</span>
+						<button onClick={function() {alter_stat(obj, 1)}}>+</button>
+						<button onClick={function() {alter_stat(obj,-1)}}>-</button><br/>
+					</div>
+				})}
+				<span>STR: {base_stat[STR]} COST: {COST[base_stat[STR]]}</span>
+				<button onClick={function() {alter_stat(STR, 1)}}>+</button>
+				<button onClick={function() {alter_stat(STR,-1)}}>-</button><br/>
 
-				<span>DEX: {base_stat[DEX]} COST: {cost[base_stat[DEX]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(1, 1)}}>+</button>
-				<button onClick={function() {alter_stat(1,-1)}}>-</button><br/>
+				<span>DEX: {base_stat[DEX]} COST: {COST[base_stat[DEX]]}</span>
+				<button onClick={function() {alter_stat(DEX, 1)}}>+</button>
+				<button onClick={function() {alter_stat(DEX,-1)}}>-</button><br/>
 
-				<span>CON: {base_stat[CON]} COST: {cost[base_stat[CON]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(2, 1)}}>+</button>
-				<button onClick={function() {alter_stat(2,-1)}}>-</button><br/>
+				<span>CON: {base_stat[CON]} COST: {COST[base_stat[CON]]}</span>
+				<button onClick={function() {alter_stat(CON, 1)}}>+</button>
+				<button onClick={function() {alter_stat(CON,-1)}}>-</button><br/>
 
-				<span>INT: {base_stat[INT]} COST: {cost[base_stat[INT]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(3, 1)}}>+</button>
-				<button onClick={function() {alter_stat(3,-1)}}>-</button><br/>
+				<span>INT: {base_stat[INT]} COST: {COST[base_stat[INT]]}</span>
+				<button onClick={function() {alter_stat(INT, 1)}}>+</button>
+				<button onClick={function() {alter_stat(INT,-1)}}>-</button><br/>
 
-				<span>WIS: {base_stat[WIS]} COST: {cost[base_stat[WIS]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(4, 1)}}>+</button>
-				<button onClick={function() {alter_stat(4,-1)}}>-</button><br/>
+				<span>WIS: {base_stat[WIS]} COST: {COST[base_stat[WIS]]}</span>
+				<button onClick={function() {alter_stat(WIS, 1)}}>+</button>
+				<button onClick={function() {alter_stat(WIS,-1)}}>-</button><br/>
 
-				<span>CHA: {base_stat[CHA]} COST: {cost[base_stat[CHA]-STAT_FLOOR]}</span>
-				<button onClick={function() {alter_stat(5, 1)}}>+</button>
-				<button onClick={function() {alter_stat(5,-1)}}>-</button><br/>
+				<span>CHA: {base_stat[CHA]} COST: {COST[base_stat[CHA]]}</span>
+				<button onClick={function() {alter_stat(CHA, 1)}}>+</button>
+				<button onClick={function() {alter_stat(CHA,-1)}}>-</button><br/>
 			</div>
 		</div>
 	)
