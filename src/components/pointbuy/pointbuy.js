@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useCallback, useEffect} from 'react'
 
 function Pointbuy() {
               // 08 09 10 11 12 13 14 15 16 17 18 19 20   stat
@@ -33,8 +33,10 @@ function Pointbuy() {
 	const increaseCHA = () => {set_cha((prev) => { return prev + 1 > STAT_CELING ? STAT_CELING : prev + 1 })} 
 	const decCHA = () => {set_cha((prev) => {return prev - 1 < STAT_FLOOR ? STAT_FLOOR : prev - 1 })}
 
-	const[point_pool, set_point] = useState(27)
-	const adjust_pool = () => {set_point(() => {return 27 - (cost[base_str-STAT_FLOOR]+cost[base_dex-STAT_FLOOR]+cost[base_con-STAT_FLOOR]+cost[base_int-STAT_FLOOR]+cost[base_wis-STAT_FLOOR] +cost[base_cha-STAT_FLOOR])})}
+	const[point_pool, set_pool] = useState(27)
+	useEffect( () => {
+		set_pool(27 - cost[base_str-STAT_FLOOR] - cost[base_dex-STAT_FLOOR] - cost[base_con-STAT_FLOOR] - cost[base_int-STAT_FLOOR] - cost[base_wis-STAT_FLOOR] - cost[base_cha-STAT_FLOOR])
+	}, [base_str, base_dex, base_con, base_int, base_wis, base_cha])
 
 	return (
 		<div className='POINTBUY'>
@@ -43,28 +45,28 @@ function Pointbuy() {
 			</div>
 			<div className='POINTBUY_BODY'>
 				<span>STR: {base_str} COST: {cost[base_str-STAT_FLOOR]}</span>
-				<button onClick={async function() {increaseSTR(); adjust_pool();}}>+</button>
-				<button onClick={function() {decSTR(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseSTR(5)}}>+</button>
+				<button onClick={function() {decSTR()}}>-</button><br/>
 
 				<span>DEX: {base_dex} COST: {cost[base_dex-STAT_FLOOR]}</span>
-				<button onClick={function() {increaseDEX(); adjust_pool();}}>+</button>
-				<button onClick={function() {decDEX(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseDEX()}}>+</button>
+				<button onClick={function() {decDEX()}}>-</button><br/>
 
 				<span>CON: {base_con} COST: {cost[base_con-STAT_FLOOR]}</span>
-				<button onClick={function() {increaseCON(); adjust_pool();}}>+</button>
-				<button onClick={function() {decCON(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseCON()}}>+</button>
+				<button onClick={function() {decCON()}}>-</button><br/>
 
 				<span>INT: {base_int} COST: {cost[base_int-STAT_FLOOR]}</span>
-				<button onClick={function() {increaseINT(); adjust_pool();}}>+</button>
-				<button onClick={function() {decINT(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseINT()}}>+</button>
+				<button onClick={function() {decINT()}}>-</button><br/>
 
 				<span>WIS: {base_wis} COST: {cost[base_wis-STAT_FLOOR]}</span>
-				<button onClick={function() {increaseWIS(); adjust_pool();}}>+</button>
-				<button onClick={function() {decWIS(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseWIS()}}>+</button>
+				<button onClick={function() {decWIS()}}>-</button><br/>
 
 				<span>CHA: {base_cha} COST: {cost[base_cha-STAT_FLOOR]}</span>
-				<button onClick={function() {increaseCHA(); adjust_pool();}}>+</button>
-				<button onClick={function() {decCHA(); adjust_pool();}}>-</button><br/>
+				<button onClick={function() {increaseCHA()}}>+</button>
+				<button onClick={function() {decCHA()}}>-</button><br/>
 			</div>
 			<div className='POINTBUY_FOOTER'>
 				POINT BUY FOOTER
