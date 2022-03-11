@@ -1,9 +1,10 @@
 import './App.css';
 import {useState} from 'react'
 
-import Standard from './components/standard/standard'
-import Pointbuy from './components/pointbuy/pointbuy'
-import Custom from './components/custom/custom'
+import Standard from '../standard/standard'
+import Pointbuy from '../pointbuy/pointbuy'
+import Custom from '../custom/custom'
+import Banner from '../banner/banner'
 
 function App() {
 	const [standard, renderStandard] = useState(true)
@@ -16,7 +17,8 @@ function App() {
 	const toggleCustom = () => {renderCustom((prev) => !prev)}
  
 	return (
-		<div>
+		<div> 
+			<Banner/>
 			<button onClick={toggleStandard}>toggle standard</button>
 			{standard ? null : <Standard/> }
 
@@ -25,6 +27,7 @@ function App() {
 
 			<button onClick={toggleCustom}>toggle custom</button>
 			{custom ? null : <Custom/> }
+			{ /* <Footer/> */}
 		</div>
 	)
 }
