@@ -1,3 +1,5 @@
+import './standard.css'
+
 function Standard() {
     var point_buy = [15, 14, 13, 12, 10, 8]
     var stats = new Array(6).fill('-')
