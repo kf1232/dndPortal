@@ -1,8 +1,72 @@
+import {useState, useCallback} from 'react'
+import './custom.css'
+    // 08 09 10 11 12 13 14 15 16 17 18 19 20   stat
+	// -1 -1  0  0  1  1  2  2  3  3  4  4  5   bonus
+	//  0  1  2  3  4  5  7  9  -  -  -  -  -   COST
+
+const STAT_FLOOR = 1
+const STAT_CELING = 20
+const STR= 0, DEX= 1, CON= 2, INT= 3, WIS= 4, CHA= 5
+const STAT_TEXT = ['STR : ', 'DEX : ', 'CON : ', 'INT : ', 'WIS : ', 'CHA : ']
+
 function Custom() {
+    const [base_stat, set_stat] = useState(new Array(6).fill(STAT_FLOOR))
+
+    const alter_stat = useCallback((stat, change) => {
+        const new_stats = [...base_stat]
+        new_stats[stat] = Math.min(Math.max(new_stats[stat] + change, STAT_FLOOR), STAT_CELING)
+        set_stat(new_stats)
+    }, [base_stat])
+
+    const batch_stat = useCallback((change) => {
+        const new_stats = new Array(6).fill(change)
+        set_stat(new_stats)
+    }, [base_stat])
+
     return (
-        <div className='CUSTOM'>
-            <div className='CUSTOM_BODY'>
-                CUSTOM BODY
+        <div>
+            <div className='custom'>
+                <div className='alignstats'>
+                    <button onClick = {function() {batch_stat(STAT_CELING)}}> Max Stats </button>
+                    <button onClick = {function() {batch_stat(STAT_FLOOR)}}> Min Stats </button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(STR, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[STR]}</div>
+                    <div className='statvalue'>{base_stat[STR]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(STR, 1)}}>inc</button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(DEX, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[DEX]}</div>
+                    <div className='statvalue'>{base_stat[DEX]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(DEX, 1)}}>inc</button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(CON, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[CON]}</div>
+                    <div className='statvalue'>{base_stat[CON]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(CON, 1)}}>inc</button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(INT, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[INT]}</div>
+                    <div className='statvalue'>{base_stat[INT]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(INT, 1)}}>inc</button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(WIS, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[WIS]}</div>
+                    <div className='statvalue'>{base_stat[WIS]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(WIS, 1)}}>inc</button>
+                </div>
+                <div className='statblock'>
+                    <button className='statblock' onClick={function() {alter_stat(CHA, -1)}}>dec</button>
+                    <div className='stattext'>{STAT_TEXT[CHA]}</div>
+                    <div className='statvalue'>{base_stat[CHA]}</div>
+                    <button className='statblock' onClick={function() {alter_stat(CHA, 1)}}>inc</button>
+                </div>
+                
             </div>
         </div>
     )

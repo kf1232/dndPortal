@@ -1,3 +1,5 @@
+import './banner.css'
+
 export default function Banner(props) {
     //const [standard, renderStandard] = useState(true)
 	//const toggleStandard = () => {renderStandard((prev) => !prev)}
@@ -10,9 +12,7 @@ export default function Banner(props) {
 
     return (
         <div>
-            <button>toggle standard</button>
-			<button>toggle pointbuy</button>
-			<button>toggle custom</button>
+
         </div>
     )
 }
