@@ -10,12 +10,15 @@ import Banner from '../banner/banner'
 
 function App() {
 	const [standard, renderStandard] = useState(true)
+	const [pointbuy, renderPointbuy] = useState(true)
+	const [custom, renderCustom] = useState(true)
+
 	const toggleStandard = () => {renderStandard((prev) => !prev)}
 	
-	const [pointbuy, renderPointbuy] = useState(true)
+	
 	const togglePointbuy = () => {renderPointbuy((prev) => !prev)}
 
-	const [custom, renderCustom] = useState(true)
+	
 	const toggleCustom = () => {renderCustom((prev) => !prev)}
  
 	return (
