@@ -14,14 +14,12 @@ const STAT_TEXT = ['STR:', 'DEX:', 'CON:', 'INT:', 'WIS:', 'CHA:']
 const COST_TEXT = 'COST:'
 
 function Pointbuy() {
-
+	const stat_id = [0, 1, 2, 3, 4, 5]
 	const [base_stat, set_stat] = useState(new Array(6).fill(STAT_FLOOR))
 	const [point_pool, set_pool] = useState(27)
 
 	useEffect( () => {
-		set_pool(27 - COST[base_stat[STR]] - COST[base_stat[DEX]] 
-			        - COST[base_stat[CON]] - COST[base_stat[INT]] 
-					- COST[base_stat[WIS]] - COST[base_stat[CHA]])
+		set_pool(27 - COST[base_stat[STR]] - COST[base_stat[DEX]]  - COST[base_stat[CON]] - COST[base_stat[INT]] - COST[base_stat[WIS]] - COST[base_stat[CHA]])
 	}, [base_stat])
 
 	const alter_stat = useCallback((stat, change) => {
@@ -39,63 +37,22 @@ function Pointbuy() {
 		set_stat(new_stats)
 	})
 	
-
-	
-	
 	return (
 		<div className='pointbuy_block'>
 			<div className='pointbuy_menu'>
-				POINT BUY: {point_pool} / 27
+				POINT BUY: {point_pool ? point_pool : 'ERROR'} / 27
 			</div>
 			<div className=''>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(STR,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[STR]} </div>
-					<div className='pointbuy_value' > {base_stat[STR]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[STR]]} </div>
-					<button onClick={function() {alter_stat(STR, 1)}}>+</button>
-				</div>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(DEX,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[DEX]} </div>
-					<div className='pointbuy_value' > {base_stat[DEX]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[DEX]]} </div>
-					<button onClick={function() {alter_stat(DEX, 1)}}>+</button>
-				</div>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(CON,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[CON]} </div>
-					<div className='pointbuy_value' > {base_stat[CON]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[CON]]} </div>
-					<button onClick={function() {alter_stat(CON, 1)}}>+</button>
-				</div>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(INT,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[INT]} </div>
-					<div className='pointbuy_value' > {base_stat[INT]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[INT]]} </div>
-					<button onClick={function() {alter_stat(INT, 1)}}>+</button>
-				</div>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(WIS,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[WIS]} </div>
-					<div className='pointbuy_value' > {base_stat[WIS]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[WIS]]} </div>
-					<button onClick={function() {alter_stat(WIS, 1)}}>+</button>
-				</div>
-				<div className='pointbuy_stat' >
-					<button onClick={function() {alter_stat(CHA,-1)}}>-</button>
-					<div className='pointbuy_text' > {STAT_TEXT[CHA]} </div>
-					<div className='pointbuy_value' > {base_stat[CHA]} </div>
-					<div className='pointbuy_text' > {COST_TEXT} </div>
-					<div className='pointbuy_value' > {COST[base_stat[CHA]]} </div>
-					<button onClick={function() {alter_stat(CHA, 1)}}>+</button>
-				</div>
+				{stat_id.map((stat) =>
+					<div className='pointbuy_stat' >
+						<button onClick={function() {alter_stat(stat,-1)}}>-</button>
+						<div className='pointbuy_text'> {STAT_TEXT[stat]} </div>
+						<div className='pointbuy_value'> {base_stat[stat]} </div>
+						<div className='pointbuy_text'> {COST_TEXT} </div>
+						<div className='pointbuy_value'> {COST[base_stat[stat]]} </div>
+						<button onClick={function() {alter_stat(stat, 1)}}>+</button>
+					</div>
+				)}
 			</div>
 			<div className='pointbuy_menu'>
 				<button onClick={function(){reset_stat()}}> Reset Stats </button>

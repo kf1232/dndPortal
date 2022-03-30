@@ -14,11 +14,7 @@ function App() {
 	const [custom, renderCustom] = useState(true)
 
 	const toggleStandard = () => {renderStandard((prev) => !prev)}
-	
-	
 	const togglePointbuy = () => {renderPointbuy((prev) => !prev)}
-
-	
 	const toggleCustom = () => {renderCustom((prev) => !prev)}
  
 	return (

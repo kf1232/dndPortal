@@ -1,28 +1,38 @@
 import './standard.css'
 
+import {useState, useCallback} from 'react'
+import Select from 'react-select'
+
+const options = [
+    {value: 15, label:'15'},
+    {value: 14, label:'14'},
+    {value: 13, label:'13'},
+    {value: 12, label:'12'},
+    {value: 10, label:'10'},
+    {value:  8, label: '8'},
+]
+
+const STAT_FLOOR = 1 
+const STAT_TEXT = ['STR: ', 'DEX: ', 'CON: ', 'INT: ', 'WIS: ', 'CHA: ']
+
 function Standard() {
-    var point_buy = [15, 14, 13, 12, 10, 8]
-    var stats = new Array(6).fill('-')
-    var S = {'STR': 1, 'DEX':2, 'CON':3, 'INT':4, "WIS":5, "CHA":6}
+    const stat_id = [0, 1, 2, 3, 4, 5]
+    const [base_stat, set_stat] = useState(new Array(6).fill(STAT_FLOOR))
+
+    const alter_stat = useCallback((stat, change) => {
+		const new_stats = [...base_stat]
+		new_stats[stat] = change
+		set_stat(new_stats)
+	}, [base_stat])
 
     return (
-        <div className='STANDARD'>
-            <div>
-                <select id='STR' name='str'>
-                    {point_buy.forEach((val) => {
-                        <option value={val}>{val}</option>
-                    })}
-                </select>
-            </div>
-
-            <div className='STANDARD_BODY'>
-                <span>STR: {stats[S['STR']]} </span><br/>
-				<span>DEX: {stats[S['DEX']]} </span><br/>
-				<span>CON: {stats[S['CON']]} </span><br/>
-				<span>INT: {stats[S['STR']]} </span><br/>
-				<span>WIS: {stats[S['STR']]} </span><br/>
-				<span>CHA: {stats[S['STR']]} </span><br/>
-            </div>
+        <div className=''>
+            {stat_id.map((stat) =>
+                <div className='standard_stat'>
+                    {`${STAT_TEXT[stat]} ${base_stat[stat]}`}
+                    <Select onChange={(selectedOption) => alter_stat(stat, selectedOption.value)} options={options} />   
+                </div>
+            )}        
         </div>
     )
 }
