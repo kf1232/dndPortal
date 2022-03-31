@@ -1,0 +1,47 @@
+.block_main{
+    padding: 1px;
+    margin: auto;
+    justify-content: center;
+    background-color: teal;
+    width: 99%;
+    
+}
+.block_actions{
+    padding: 1px;
+    margin:auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: lightblue;
+    
+}
+.block_button{
+    margin-left: -70px;
+    margin-right: -70px;
+}
+.block_stats{
+    padding: 1px;
+    background-color: lightpink;
+    
+}
+.block_info{
+    padding: 1px;
+    background-color: lightsteelblue;
+    
+}
+.block_gen{
+    padding: 1px;
+    display:flex;
+    justify-content: space-evenly;
+}
+.block_text{
+    padding: 1px;
+    display:flex;
+    justify-content: space-evenly;
+    margin:auto;
+}
+.block_adjust{
+    padding: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
