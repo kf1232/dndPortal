@@ -1,0 +1,46 @@
+.app{
+	background-color: lightblue;
+	display:grid;
+	margin:auto;
+	grid-template-rows: 1.5fr repeat(5, auto);
+	grid-template-columns: 1fr 8fr 1fr;
+	max-width: 1000px;
+}
+.app_title{
+	background-color:lightcoral;
+	margin: 5px;
+	grid-row: 1;
+	grid-column: 2;
+
+}
+.app_race {
+	background-color:lightgoldenrodyellow;
+	margin: 5px;
+	grid-row: 2;
+	grid-column: 2;
+
+}
+.app_class {
+	background-color: lightgray;
+	margin: 5px;
+	grid-row: 3;
+	grid-column: 2;
+}
+.app_stat {
+	background-color: lightgreen;
+	margin: 5px;
+	grid-row: 4;
+	grid-column: 2;
+}
+.app_back {
+	background-color: lightpink;
+	margin: 5px;
+	grid-row: 5;
+	grid-column: 2;
+}
+.app_equip {
+	background-color: lightseagreen;
+	margin: 5px;
+	grid-row: 6;
+	grid-column: 2;
+}
