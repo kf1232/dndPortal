@@ -7,7 +7,6 @@ import CharClass from '../charClass/charClass';
 import CharEquip from '../charEquip/charEquip';
 
 function App() {
-
 	return (
 		<div className='app'>
 			<div className='app_title'> 

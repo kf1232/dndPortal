@@ -4,15 +4,16 @@ import {useState, useCallback} from 'react'
 
 const STAT_FLOOR = 1 
 const STAT_TEXT = ['STR: ', 'DEX: ', 'CON: ', 'INT: ', 'WIS: ', 'CHA: ']
+const stat_id = [0, 1, 2, 3, 4, 5]
 
 function Standard() {
-    const stat_id = [0, 1, 2, 3, 4, 5]
     const [base_stat, set_stat] = useState(new Array(6).fill(STAT_FLOOR))
     const [options, setOptions] = useState(['15', '14', '13', '12', '10', '8'])
 
     const alter_stat = useCallback((stat, change) => {
         if (base_stat[stat] !== 1)
             options.push(base_stat[stat])
+
         options.splice(options.indexOf(change),1)
         const new_stats = [...base_stat]
         new_stats[stat] = change
@@ -48,10 +49,11 @@ function Standard() {
                                     <option value=''> - </option>
                                     {options.map((obj) => <option value={obj}>{obj}</option> )}
                                 </select>  
-                            </div> : null }
-                    </div> )} 
+                            </div> 
+                        : null }
+                    </div> 
+                )} 
 			</div>
-			
 		</div>
     )
 }

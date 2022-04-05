@@ -6,8 +6,10 @@ function Custom() {
     const FLOOR = 1, CELING = 20
     const STAT_TEXT = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
     const QUICK_ACTIONS = ['Min Stats','Base Stats','Max Stats']
+    const QUICK_BUTTONS = [0,1,2]
     const QUICK_VALUE = [1, 8, 20]
     const stat_id = [0, 1, 2, 3, 4, 5]
+
     const [base_stat, set_stat] = useState(new Array(6).fill(FLOOR))
 
     const alter_stat = useCallback((stat, change) => {
@@ -27,9 +29,8 @@ function Custom() {
                 Custom Point Buy
             </div>
 			<div className='statbuilder_actions'>
-                {[0,1,2].map((i) => 
-                    <button className='statbuilder_button' 
-                            onClick = {function() {batch_stat(QUICK_VALUE[i])}}>
+                {QUICK_BUTTONS.map((i) => 
+                    <button className='statbuilder_button' onClick = {function() {batch_stat(QUICK_VALUE[i])}}>
                             {QUICK_ACTIONS[i]}
                     </button>
                 )}

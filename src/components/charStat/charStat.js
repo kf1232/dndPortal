@@ -12,7 +12,6 @@ function CharStat(){
     const selectBase = useCallback((input) => {
         const newBase = [0,0,0]
         newBase[input] = 1
-        console.log(BaseStat)
         setBaseStat(newBase)
 	}, [BaseStat])
 

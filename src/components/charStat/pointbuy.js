@@ -55,12 +55,10 @@ function Pointbuy() {
 						<div className='stat_cost'>
 						 	{COST_TEXT + ' ' + COST[base_stat[stat]]} 
 						</div>
-						<button className='stat_dec'
-								onClick={function() {alter_stat(stat,-1)}}>
+						<button className='stat_dec' onClick={function() {alter_stat(stat,-1)}}>
 								-
 						</button>
-						<button className='stat_inc'
-								onClick={function() {alter_stat(stat, 1)}}>
+						<button className='stat_inc' onClick={function() {alter_stat(stat, 1)}}>
 								+
 						</button>
 					</div>
