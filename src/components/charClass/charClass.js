@@ -81,8 +81,7 @@ function CharClass(){
         <div className='class_grid'>
             {Object.keys(CLASS_LIST).map(function(key) {
             return (
-            <div key={CLASS_LIST[key].name} onClick={function() {console.log(CLASS_LIST[key].name)}}
-                    className='class_type'>
+            <div key={CLASS_LIST[key].name} onClick={function() {console.log(CLASS_LIST[key].name)}} className='class_type'>
                 <div className='class_name'> 
                     {CLASS_LIST[key].name} 
                 </div>
@@ -90,15 +89,15 @@ function CharClass(){
                     {'Hit Dice: '+CLASS_LIST[key].hit_die} 
                 </div>
                 <div className='class_ability'> 
-                {CLASS_LIST[key].primary_ability.map((abil_type) => 
-                    'Stat(s) '+abil_type+' '
-                )} 
+                    Primary Stat <br/>
+                    {CLASS_LIST[key].primary_ability.map((abil_type) => 
+                        abil_type+' '
+                    )} 
                 </div>
-                <div className='class_saves'> 
+                <div className='class_saves'>
+                    Saves <br/>
                     {CLASS_LIST[key].saves.map((save_type) => 
-                    <div>
-                        {'Saves(s) '+save_type+' '}
-                    </div>
+                        save_type+' '
                     )} 
                 </div>
             </div>
