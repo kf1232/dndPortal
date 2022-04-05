@@ -11,7 +11,7 @@ function Standard() {
     const [options, setOptions] = useState(['15', '14', '13', '12', '10', '8'])
 
     const alter_stat = useCallback((stat, change) => {
-        if (base_stat[stat] != 1)
+        if (base_stat[stat] !== 1)
             options.push(base_stat[stat])
         options.splice(options.indexOf(change),1)
         const new_stats = [...base_stat]
@@ -42,7 +42,7 @@ function Standard() {
                         <div className='stat_value'> 
                             {base_stat[stat]}
                         </div>
-                        {base_stat[stat] == 1 ? 
+                        {base_stat[stat] === 1 ? 
                             <div className='stat_select'>
                                 <select name='standard' onChange={(event) => alter_stat(stat, event.target.value)}>
                                     <option value=''> - </option>

@@ -3,7 +3,7 @@ import './charStat_body.css'
 import {useState, useCallback} from 'react'
 
 function Custom() {
-    const FLOOR = 1, CELING = 20, BASE = 8
+    const FLOOR = 1, CELING = 20
     const STAT_TEXT = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
     const QUICK_ACTIONS = ['Min Stats','Base Stats','Max Stats']
     const QUICK_VALUE = [1, 8, 20]
@@ -57,24 +57,3 @@ function Custom() {
 }
 
 export default Custom
-
-/*
-    <div className='block_stats'>
-        {stat_id.map((stat) =>
-            <div className='block_gen'>
-                <div className='block_text'>
-                    {STAT_TEXT[stat]+"  "+base_stat[stat]}
-                    {}
-                </div>
-                <div className='block_adjust'>
-                    <button onClick={function() {alter_stat(stat, -1)}}>dec</button>
-                    <button onClick={function() {alter_stat(stat, 1)}}>inc</button>
-                </div>
-                
-            </div>
-        )} 
-    </div>
-    <div className='block_info'>
-        Block Info
-    </div>
-*/

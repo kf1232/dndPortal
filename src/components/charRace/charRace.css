@@ -1,0 +1,7 @@
+.block_race{
+    margin: 3px;
+    padding: 3px;
+}
+.race_select{
+    display:grid;
+}
