@@ -1,0 +1,42 @@
+.title{
+    background-color: lightblue;
+    margin: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+.info{
+    background-color: lightslategray;
+    margin: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+.quickActions{
+    background-color: lightgoldenrodyellow;
+    margin: 2px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.gridLayout{
+    background-color: lightgray;
+    margin: 2px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+    .gridOption{
+        background-color: lightgreen;
+        margin: 2px;
+        text-align: center;
+    }
+        .optionTitle{
+            font-weight: bold;
+        }
+        .optionInfo{
+            font-size: .8em;
+        }
+.selectLayout{
+    text-align: center;
+}

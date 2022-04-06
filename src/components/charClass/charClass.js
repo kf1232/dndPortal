@@ -1,5 +1,7 @@
 import './charClass.css'
 
+import {useState} from 'react'
+
 const CLASS_LIST = {
     Barbarian: {
         hit_die: 'd12',
@@ -64,33 +66,42 @@ const CLASS_LIST = {
 }
 
 function CharClass(){
+    const [classSelect, setClass] = useState('')
+
     return(
     <div className='class_block'>
-        <div className='class_grid'>
-            {Object.keys(CLASS_LIST).map(function(key) {
-            return (
-            <div key={key} onClick={function() {console.log(key)}} className='class_type'>
-                <div className='class_name'> 
-                    {key} 
-                </div>
-                <div className='class_hit'> 
-                    {'Hit Dice: '+CLASS_LIST[key].hit_die} 
-                </div>
-                <div className='class_ability'> 
-                    Primary Stat <br/>
-                    {CLASS_LIST[key].primary_ability.map((abil_type) => 
-                        abil_type+' '
-                    )} 
-                </div>
-                <div className='class_saves'>
-                    Saves <br/>
-                    {CLASS_LIST[key].saves.map((save_type) => 
-                        save_type+' '
-                    )} 
-                </div>
-            </div>
-            )})}
+        <div>
+            <button onClick={function(){setClass('')}}> Reset Class </button>
         </div>
+        {classSelect ? 
+            <div> Selected: {classSelect} </div> 
+            :
+            <div className='class_grid'>
+                {Object.keys(CLASS_LIST).map(function(key, i) {
+                return (
+                <div key={i} onClick={function() {setClass(key)}} className='class_type'>
+                    <div className='class_name'> 
+                        {key} 
+                    </div>
+                    <div className='class_hit'> 
+                        {'Hit Dice: '+CLASS_LIST[key].hit_die} 
+                    </div>
+                    <div className='class_ability'> 
+                        Primary Stat <br/>
+                        {CLASS_LIST[key].primary_ability.map((abil_type) => 
+                            abil_type+' '
+                        )} 
+                    </div>
+                    <div className='class_saves'>
+                        Saves <br/>
+                        {CLASS_LIST[key].saves.map((save_type) => 
+                            save_type+' '
+                        )} 
+                    </div>
+                </div>
+                )})}
+            </div>
+        }
     </div>
     )
 }

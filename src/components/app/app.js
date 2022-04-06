@@ -2,7 +2,7 @@ import './app.css';
 
 import CharStat from '../charStat/charStat'
 import CharRace from '../charRace/charRace'
-import CharBackground from '../charBack/charBack';
+import CBack from '../charBack/charBack';
 import CharClass from '../charClass/charClass';
 import CharEquip from '../charEquip/charEquip';
 
@@ -22,7 +22,7 @@ function App() {
 				<CharStat/> 
 			</div>
 			<div className='app_back'> 
-				<CharBackground/>
+				<CBack/>
 			</div>
 			<div className='app_equip'> 
 				<CharEquip/>

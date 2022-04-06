@@ -30,7 +30,7 @@ function Custom() {
             </div>
 			<div className='statbuilder_actions'>
                 {QUICK_BUTTONS.map((i) => 
-                    <button className='statbuilder_button' onClick = {function() {batch_stat(QUICK_VALUE[i])}}>
+                    <button className='statbuilder_button' onClick = {() => {batch_stat(QUICK_VALUE[i])}}>
                             {QUICK_ACTIONS[i]}
                     </button>
                 )}
@@ -42,11 +42,11 @@ function Custom() {
                         {STAT_TEXT[stat] + ' ' + base_stat[stat]} 
                     </div>
                     <button className='stat_dec'
-                            onClick={function() {alter_stat(stat,-1)}}>
+                            onClick={() => {alter_stat(stat,-1)}}>
                             -
                     </button>
                     <button className='stat_inc'
-                            onClick={function() {alter_stat(stat, 1)}}>
+                            onClick={() => {alter_stat(stat, 1)}}>
                             +
                     </button>
                 </div>
