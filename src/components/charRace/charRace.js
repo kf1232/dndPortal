@@ -4,6 +4,8 @@ import {useState} from 'react'
 
 const STAT_ID = [0,1,2,3,4,5]
 const STAT_NAMES = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
+
+// TODO: Add title to each Race
 const RACE_LIST = {
     Dragonborn: {
         traits: [2,0,0,0,0,1],
@@ -52,11 +54,11 @@ function CharRace(){
                 Char Race Base
             </div>
             <div className='dnd_race_actions'>
-                <button onClick={function() {setRace('')}}>reset choice</button>
+                <button onClick={() => {setRace('')}}>reset choice</button>
             </div>
             {raceSelect ? <div> Selected: {raceSelect} </div> 
             :<div className='dnd_race_grid'>
-                {Object.keys(RACE_LIST).map(function(key, i) {
+                {Object.keys(RACE_LIST).map((key, i) => {
                     return(
                         <div className='dnd_race_element' 
                              key={i} 
@@ -66,7 +68,7 @@ function CharRace(){
                             </div>
                             <div className='dnd_race_content'>
                                 {STAT_ID.map((stat, i) => 
-                                    RACE_LIST[key].traits[stat] ? <div key={i} className='dnd_race_stat_bonus'> {"+ "+RACE_LIST[key].traits[stat]+"  "+STAT_NAMES[stat]} </div> 
+                                    RACE_LIST[key].traits[stat] ? <div key={i} className='dnd_race_stat_bonus'> {"+ " + RACE_LIST[key].traits[stat]+"  "+STAT_NAMES[stat]} </div> 
                                                                 : <div key={i} className='dnd_race_stat_bonus'> {"-"} </div>
                                 )}
                             </div>

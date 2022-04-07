@@ -47,20 +47,22 @@ function Pointbuy() {
 				</button>
 			</div>
 			<div className='statbuilder_body'>	
-				{stat_id.map((stat)=> 
-					<div className='statbuilder_stat'>
-						<div className='stat_name'>
-							{STAT_TEXT[stat] + ' ' + base_stat[stat]} 
+				{stat_id.map((stat, i) => 
+					<div key={i}>
+						<div className='statbuilder_stat'>
+							<div className='stat_name'>
+								{STAT_TEXT[stat] + ' ' + base_stat[stat]} 
+							</div>
+							<div className='stat_cost'>
+								{COST_TEXT + ' ' + COST[base_stat[stat]]} 
+							</div>
+							<button className='stat_dec' onClick={function() {alter_stat(stat,-1)}}>
+									-
+							</button>
+							<button className='stat_inc' onClick={function() {alter_stat(stat, 1)}}>
+									+
+							</button>
 						</div>
-						<div className='stat_cost'>
-						 	{COST_TEXT + ' ' + COST[base_stat[stat]]} 
-						</div>
-						<button className='stat_dec' onClick={function() {alter_stat(stat,-1)}}>
-								-
-						</button>
-						<button className='stat_inc' onClick={function() {alter_stat(stat, 1)}}>
-								+
-						</button>
 					</div>
 				)}
 			</div>
@@ -69,4 +71,4 @@ function Pointbuy() {
 	)
 }
 
-export default Pointbuy
+export default Pointbuy;

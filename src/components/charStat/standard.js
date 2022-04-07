@@ -35,8 +35,8 @@ function Standard() {
                 <button className='standardButton' onClick={resetStat}> Reset Stats </button>
 			</div>
 			<div className='statbuilder_body'>	
-                {stat_id.map((stat) =>
-                    <div className='statbuilder_stat'>
+                {stat_id.map((stat, i) =>
+                    <div key={i} className='statbuilder_stat'>
                         <div className='stat_name'>
                             {STAT_TEXT[stat]}
                         </div>
@@ -47,7 +47,7 @@ function Standard() {
                             <div className='stat_select'>
                                 <select name='standard' onChange={(event) => alter_stat(stat, event.target.value)}>
                                     <option value=''> - </option>
-                                    {options.map((obj) => <option value={obj}>{obj}</option> )}
+                                    {options.map((obj, i) => <option key={i} value={obj}>{obj}</option> )}
                                 </select>  
                             </div> 
                         : null }

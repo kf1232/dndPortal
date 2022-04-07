@@ -29,27 +29,29 @@ function Custom() {
                 Custom Point Buy
             </div>
 			<div className='statbuilder_actions'>
-                {QUICK_BUTTONS.map((i) => 
-                    <button className='statbuilder_button' onClick = {() => {batch_stat(QUICK_VALUE[i])}}>
+                {QUICK_BUTTONS.map((i, index) => 
+                    <button key={index} className='statbuilder_button' onClick = {() => {batch_stat(QUICK_VALUE[i])}}>
                             {QUICK_ACTIONS[i]}
                     </button>
                 )}
 			</div>
 			<div className='statbuilder_body'>	
-                {stat_id.map((stat) => 
-                    <div className='statbuilder_stat'>
-                    <div className='stat_name'>
-                        {STAT_TEXT[stat] + ' ' + base_stat[stat]} 
+                {stat_id.map((stat, i) => 
+                    <div key={i}>
+                        <div className='statbuilder_stat'>
+                            <div className='stat_name'>
+                                {STAT_TEXT[stat] + ' ' + base_stat[stat]} 
+                            </div>
+                            <button className='stat_dec'
+                                    onClick={() => {alter_stat(stat,-1)}}>
+                                    -
+                            </button>
+                            <button className='stat_inc'
+                                    onClick={() => {alter_stat(stat, 1)}}>
+                                    +
+                            </button>
+                        </div>
                     </div>
-                    <button className='stat_dec'
-                            onClick={() => {alter_stat(stat,-1)}}>
-                            -
-                    </button>
-                    <button className='stat_inc'
-                            onClick={() => {alter_stat(stat, 1)}}>
-                            +
-                    </button>
-                </div>
                 )}
 			</div>
 			
@@ -57,4 +59,4 @@ function Custom() {
     )
 }
 
-export default Custom
+export default Custom;

@@ -1,7 +1,10 @@
 import './charBack.css'
 
-import {useState} from 'react'
+import {useState} from 'react';
+import Selected from '../Selected/selected';
+import SelectOption from '../SelectOption/selectOption';
 
+// TODO: move to json web server
 const BACKGROUND = {
 	Acolyte: {
 		title: 'Acolyte',
@@ -34,43 +37,6 @@ const BACKGROUND = {
 	},
 }
 
-function SelectOption(props) {
-	function handleSelect(event) {
-		event.target.className === 'optionInfo' ?
-			props.onClick(event.target.previousSibling.innerText)
-			:
-			props.onClick(event.target.innerText)
-	}
-
-	return (
-		Object.keys(props.value).map((key, i) => {
-			return (
-				<div key={i} className='gridOption'>
-					<div className='optionTitle' onClick={handleSelect}>
-						{props.value[key].title}
-					</div>
-					<div className='optionInfo' onClick={handleSelect}>
-						{props.value[key].feature}
-					</div>
-				</div>
-			)
-		})
-	)
-}
-
-function Selected(props) {
-	return (
-		<div className='selectLayout'>
-			{Object.keys(props.value).map((key, i) => {
-				var type = key === 'title' ? 'optionTitle': 'optionInfo'
-				return (
-					<div className={type} key={i}> {props.value[key]} </div>
-				)
-			})}
-		</div>
-	)
-}
-
 function CBack(){
 	const [selected, setSelected] = useState('')
 
@@ -88,12 +54,14 @@ function CBack(){
 			</div>
 			{selected ? 
 				<Selected value={BACKGROUND[selected]}/>
-				:
-				<div className='gridLayout'> <SelectOption value={BACKGROUND} onClick={handleSelect}/> </div>
+				: 
+				<div className='gridLayout'> 
+					<SelectOption value={BACKGROUND} onClick={handleSelect}/> 
+				</div>
 				
 			}
 		</div>
 	)
 }
 
-export default CBack
+export default CBack;

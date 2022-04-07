@@ -1,4 +1,4 @@
-import './banner.css'
+/*import './banner.css'
 
 export default function Banner(props) {
     //const [standard, renderStandard] = useState(true)
@@ -15,4 +15,4 @@ export default function Banner(props) {
 
         </div>
     )
-}
+}*/
