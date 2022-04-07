@@ -1,5 +1,5 @@
 Notes:
-- Use a linter (eslint)
+
 - Use MERN stack
 	- M: MongoDB / MySQL / MSSQL
 	- E: Express (WebServer)
@@ -9,16 +9,11 @@ Notes:
 	- can easily switch between versions of Node/NPM (Major releases come preinstalled)
 - Install PyENV
 	- same as above
-- Turn on XMP for your memory (Go in BIOS and choose XMP profile 1)
-- Go into nvidia control panel
-	- Update your drivers
-	- Update some settings to make your computer faster (ask Chance)
 - Start using css modules
 - Break out components into their own folder
 	- UNLESS they are multiples of a specific kind of component
 	- Refactor PointBuy, Custom, and Standard to use a common component for code that is similar between them
-- Use JSON Server (https://www.npmjs.com/package/json-server) for fake API calls
-	- Once you get around to storing data and serving it up, replace json-server with actual API
+
 	- Use Axios to get your data from json server
 - When you get around to doing authentication, use passport
 	- Has handling for JWTs and OAuth
@@ -28,3 +23,12 @@ Notes:
 - I suggest using GraphQL as a middle layer between your frontend and your db/services
 	- This is both a learning venture and a good practice for enterprise applications
 	- Look up apollo boost or apollo client/server to get started
+
+
+[complete] Turn on XMP for your memory (Go in BIOS and choose XMP profile 1)
+[complete] Go into nvidia control panel
+		 - Update your drivers
+		 - Update some settings to make your computer faster (ask Chance)
+[complete] Use a linter (eslint)
+[complete] Use JSON Server (https://www.npmjs.com/package/json-server) for fake API calls
+         - Once you get around to storing data and serving it up, replace json-server with actual API

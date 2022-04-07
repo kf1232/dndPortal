@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "accab312-2ea4-48bb-be2e-3bf3e0ff169b",
+		"name": "dndPortal_postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Background",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Background",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Background"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ancestry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Ancestry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Ancestry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Class",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/Skills",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"Skills"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

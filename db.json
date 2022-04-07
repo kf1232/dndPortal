@@ -1,0 +1,64 @@
+{
+    "Stats": [
+        {"id": 0, "short": "STR", "long": "Strength"},
+        {"id": 1, "short": "DEX", "long": "Dexterity"},
+        {"id": 2, "short": "CON", "long": "Constitution"},
+        {"id": 3, "short": "INT", "long": "Intelligence"},
+        {"id": 4, "short": "WIS", "long": "Wisdom"},
+        {"id": 5, "short": "CHA", "long": "Charisma"}
+    ],
+    "Background": [
+        {"id": 0, "title": "Acolyte", "feature": "Shelter of the Faithful"},
+        {"id": 1, "title": "Criminal", "feature": "Criminal Contract"},
+        {"id": 2, "title": "Spy", "feature": "Criminal Contract"},
+        {"id": 3, "title": "Folk Hero", "feature": "Rustic Hospitality"},
+        {"id": 4, "title": "Noble", "feature": "Position of Privilege"},
+        {"id": 5, "title": "Sage", "feature": "Researcher"},
+        {"id": 6, "title": "Soldier", "feature": "Military Rank"}
+    ],
+    "Ancestry": [
+        {"id": 0, "title": "Dragonborn", "traits": [2,0,0,0,0,1], "feature_list": ["Draconic Ancestry", "Breath Weapon", "Damage Resistance"]},
+        {"id": 1, "title": "Dwarf", "traits": [0,0,2,0,0,0], "feature_list": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning"]},
+        {"id": 2, "title": "Elf", "traits": [0,2,0,0,0,0], "feature_list": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]},
+        {"id": 3, "title": "Gnome", "traits": [0,0,0,2,0,0], "feature_list": ["Darkvision", "Gnome Cunning"]},
+        {"id": 4, "title": "Half Elf", "traits": [0,0,0,0,0,2], "feature_list": ["Half Elf Extra Ability Score Bonus", "Darkvision", "Fey Ancestry", "Skill Versatility"]},
+        {"id": 5, "title": "Halfling", "traits": [0,2,0,0,0,0], "feature_list": ["Lucky", "Brave", "Halfling Nimbleness"]},
+        {"id": 6, "title": "Half Ork", "traits": [2,0,1,0,0,0], "feature_list": ["Darkvision", "Menacing", "Relentless Endurance", "Savage Attacks"]},
+        {"id": 7, "title": "Human", "traits": [1,1,1,1,1,1], "feature_list": ["Extra Language"]},
+        {"id": 8, "title": "Tiefling", "traits": [0,0,0,1,0,2], "feature_list": ["Darkvision", "Hellish Resistance", "Infernal Legacy"]}
+    ],
+    "Class": [
+        {"id": 0, "title": "Barbarian", "hitDie": "d12", "primaryAbility": ["STR"], "saves": ["STR", "CON"]},
+        {"id": 1, "title": "Bard", "hitDie": "d8", "primaryAbility": ["CHA"], "saves": ["DEX", "CHA"]},
+        {"id": 2, "title": "Cleric", "hitDie": "d8", "primaryAbility": ["WIS"], "saves": ["WIS", "CHA"]},
+        {"id": 3, "title": "Druid", "hitDie": "d8", "primaryAbility": ["WIS"], "saves": ["WIS", "INT"]},
+        {"id": 4, "title": "Fighter", "hitDie": "d10", "primaryAbility": ["STR", "CHA"], "saves": ["STR", "CON"]},
+        {"id": 5, "title": "Monk", "hitDie": "d8", "primaryAbility": ["DEX", "WIS"], "saves": ["STR", "DEX"]},
+        {"id": 6, "title": "Paladin", "hitDie": "d10", "primaryAbility": ["STR","CHA"], "saves": ["WIS","CHA"]},
+        {"id": 7, "title": "Ranger", "hitDie": "d10", "primaryAbility": ["DEX", "WIS"], "saves": ["STR", "DEX"]},
+        {"id": 8, "title": "Rogue", "hitDie": "d8", "primaryAbility": ["DEX"], "saves": ["DEX","INT"]},
+        {"id": 9, "title": "Sorcerer", "hitDie": "d6", "primaryAbility": ["CHA"], "saves": ["CON","CHA"]},
+        {"id": 10, "title": "Warlock", "hitDie": "d8", "primaryAbility": ["CHA"], "saves": ["STR", "DEX"]},
+        {"id": 11, "title": "Wizard", "hitDie": "d6", "primaryAbility": ["INT"], "saves": ["INT","WIS"]}
+    ],
+    "Skills": [
+        {"id": 0, "title": "Athletics", "stat": "STR"},
+        {"id": 1, "title": "Acrobatics", "stat": "DEX"},
+        {"id": 2, "title": "Slight of Hand", "stat": "DEX"},
+        {"id": 3, "title": "Stealth", "stat": "DEX"},
+        {"id": 4, "title": "Arcana", "stat": "INT"},
+        {"id": 5, "title": "History", "stat": "INT"},
+        {"id": 6, "title": "Investigation", "stat": "INT"},
+        {"id": 7, "title": "Nature", "stat": "INT"},
+        {"id": 8, "title": "Religion", "stat": "INT"},
+        {"id": 9, "title": "Animal Handling", "stat": "WIS"},
+        {"id": 10, "title": "Insight", "stat": "WIS"},
+        {"id": 11, "title": "Medicine", "stat": "WIS"},
+        {"id": 12, "title": "Perception", "stat": "WIS"},
+        {"id": 13, "title": "Survival", "stat": "WIS"},
+        {"id": 14, "title": "Deception", "stat": "CHA"},
+        {"id": 15, "title": "Intimidation", "stat": "CHA"},
+        {"id": 16, "title": "Performance", "stat": "CHA"},
+        {"id": 17, "title": "Persuasion", "stat": "CHA"}
+    ]
+}
