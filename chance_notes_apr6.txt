@@ -5,6 +5,7 @@ Notes:
 	- E: Express (WebServer)
 	- R: React 
 	- N: Node
+	
 - Install NVM (Node version manager)
 	- can easily switch between versions of Node/NPM (Major releases come preinstalled)
 - Install PyENV
@@ -20,6 +21,7 @@ Notes:
 - Setup Jira for this project and connect with github
 	- Make rules to connect your github repo to jira and link PRs/branches
 - Write program to scrape 5e.tools to grab your data and update it
+
 - I suggest using GraphQL as a middle layer between your frontend and your db/services
 	- This is both a learning venture and a good practice for enterprise applications
 	- Look up apollo boost or apollo client/server to get started

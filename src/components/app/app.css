@@ -44,3 +44,45 @@
 	grid-row: 6;
 	grid-column: 2;
 }
+
+.selectComponent {
+	margin: 2px;
+	background-color: lightgreen;
+	text-align: center;
+}
+.selectTitle {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.selectMinorTitle {
+	font-weight: bold;
+	font-size: .9em;
+}
+.selectGrid {
+	display:grid;
+	margin: 2px;
+	grid-template-columns: repeat(3, 1fr);
+
+	background: lightcoral;
+}
+.selectGridMember{
+	margin: 2px;
+	font-size: .7em;
+	background-color: lightcyan;
+}
+
+.componentTitle{
+
+}
+.componentInfo{
+
+}
+.componentQuickActions{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.componentBody{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}

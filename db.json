@@ -1,5 +1,5 @@
 {
-    "Stats": [
+    "Attributes": [
         {"id": 0, "short": "STR", "long": "Strength"},
         {"id": 1, "short": "DEX", "long": "Dexterity"},
         {"id": 2, "short": "CON", "long": "Constitution"},

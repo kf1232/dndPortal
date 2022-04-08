@@ -1,10 +1,10 @@
-import './app.css';
+import './App.css';
 
-import CharStat from '../charStat/charStat'
-import CharRace from '../charRace/charRace'
-import CBack from '../charBack/charBack';
-import CharClass from '../charClass/charClass';
-import CharEquip from '../charEquip/charEquip';
+import CharacterAttributes from '../CharacterAttributes/CharacterAttributes'
+import CharacterAncestory from '../CharacterAncestory/CharacterAncestory'
+import CharacterBackground from '../CharacterBackground/CharacterBackground';
+import CharacterClass from '../CharacterClass/CharacterClass';
+import CharacterEqupiment from '../CharacterEqupiment/CharacterEqupiment';
 
 function App() {
 	return (
@@ -12,20 +12,20 @@ function App() {
 			<div className='app_title'> 
 				Title 
 			</div>
-			<div className='app_race'> 
-				<CharRace/>
+			<div className='app_race'>
+				<CharacterAncestory/>
 			</div>
-			<div className='app_class'> 
-				<CharClass/>
+			<div className='app_class'>
+				<CharacterClass/>
 			</div>
 			<div className='app_stat'> 
-				<CharStat/> 
+				<CharacterAttributes/> 
 			</div>
 			<div className='app_back'> 
-				<CBack/>
+				<CharacterBackground/>
 			</div>
 			<div className='app_equip'> 
-				<CharEquip/>
+				<CharacterEqupiment/>
 			</div>
 		</div>
 	)

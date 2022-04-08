@@ -1,5 +1,63 @@
-import './charClass.css'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
+import UnitClass from './UnitClass/UnitClass'
+import SelectedClass from './SelectedClass/SelectedClass'
+
+function CharacterAncestory(){
+	const [loading, setLoading] = useState(true)
+	const [dndClass, setClass] = useState([])
+	const [attribue, setAttribue] = useState([])
+	const [selected, setSelected] = useState('')
+
+	useEffect(() => {
+		const fetchData = async () => {
+			setLoading(true)
+			try {
+				const classResponse = await axios.get('http://localhost:3004/Class')
+				const attributeResponse = await axios.get('http://localhost:3004/Attributes')
+				setClass(classResponse.data)
+				setAttribue(attributeResponse.data)
+			} catch (error) {
+				console.log(error)
+			}
+			setLoading(false)
+		}
+		fetchData()
+	}, [])
+
+	function handleSelect(selectedValue = '') {
+		setSelected(selectedValue)
+	}
+
+	return(
+		<div>
+
+			<div className='componentQuickActions'> 
+				<div> Quick Actions </div>
+				<button onClick={() => handleSelect()}> Reset </button>	
+                <button> {selected} </button>
+			</div>
+			{ selected !== '' ?
+				<div className='componentSelected'>
+                    <SelectedClass  cla={dndClass[selected]} 
+                                    atr={attribue}/>
+				</div>
+			:
+				loading ? "Loading..." :
+				<div className='componentBody'>
+					{dndClass.map(part => {
+                        return( <UnitClass key={part.id} part={part} onClick={handleSelect}/> )
+					})}
+				</div>
+			} 
+		</div>
+	)
+}
+
+export default CharacterAncestory
+
+/*
 import {useState} from 'react'
 
 const CLASS_LIST = {
@@ -65,7 +123,7 @@ const CLASS_LIST = {
     }
 }
 
-function CharClass(){
+function CharacterClass(){
     const [classSelect, setClass] = useState('')
 
     return(
@@ -106,4 +164,6 @@ function CharClass(){
     )
 }
 
-export default CharClass
+export default CharacterClass
+
+*/

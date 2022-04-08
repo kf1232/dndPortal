@@ -1,11 +1,12 @@
-import './charStat.css'
-import Custom from './custom'
-import PointBuy from './pointbuy'
-import Standard from './standard'
+import './CharacterAttributes.css'
+
+import Custom from '../CustomAttributes/custom'
+import PointBuy from '../PointBuyAttributes/pointbuy'
+import Standard from '../StandardAttributes/standard'
 
 import {useState, useCallback} from 'react'
 
-function CharStat(){
+function CharacterAttributes(){
     const POINTBUY = 0, STANDARD =1, CUSTOM = 2
     const [BaseStat, setBaseStat] = useState([0, 0, 0])
 
@@ -40,4 +41,4 @@ function CharStat(){
     )
 }
 
-export default CharStat
+export default CharacterAttributes

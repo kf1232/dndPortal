@@ -1,4 +1,4 @@
-import './charBack.css'
+import './CharacterBackground.css'
 
 import {useState} from 'react';
 import Selected from '../Selected/selected';
@@ -50,7 +50,7 @@ function CBack(){
 			<div className='info'> Info </div>
 			<div className='quickActions'> 
 				<div> Quick Actions: </div>
-				<button onClick={() => {handleSelect('')}}>Reset</button>
+				<button onClick={() => {handleSelect('')}}>Reset</button> 
 			</div>
 			{selected ? 
 				<Selected value={BACKGROUND[selected]}/>
@@ -58,7 +58,6 @@ function CBack(){
 				<div className='gridLayout'> 
 					<SelectOption value={BACKGROUND} onClick={handleSelect}/> 
 				</div>
-				
 			}
 		</div>
 	)
