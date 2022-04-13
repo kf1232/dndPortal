@@ -1,5 +1,3 @@
-import './CharacterEqupiment.css'
-
 function CharacterEqupiment(){
     return(
         <div>

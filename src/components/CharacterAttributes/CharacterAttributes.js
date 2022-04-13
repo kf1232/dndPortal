@@ -1,8 +1,6 @@
-import './CharacterAttributes.css'
-
-import Custom from '../CustomAttributes/custom'
-import PointBuy from '../PointBuyAttributes/pointbuy'
-import Standard from '../StandardAttributes/standard'
+import Custom from '../AttributeCustom/AttributeCustom'
+import PointBuy from '../AttributePointBuy/AttributePointBuy'
+import Standard from '../AttributeStandard/AttributeStandard'
 
 import {useState, useCallback} from 'react'
 

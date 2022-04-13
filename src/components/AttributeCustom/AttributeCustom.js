@@ -1,5 +1,3 @@
-import './charStat_body.css'
-
 import {useState, useCallback} from 'react'
 
 function Custom() {

@@ -1,46 +1,380 @@
 {
-    "Attributes": [
-        {"id": 0, "short": "STR", "long": "Strength"},
-        {"id": 1, "short": "DEX", "long": "Dexterity"},
-        {"id": 2, "short": "CON", "long": "Constitution"},
-        {"id": 3, "short": "INT", "long": "Intelligence"},
-        {"id": 4, "short": "WIS", "long": "Wisdom"},
-        {"id": 5, "short": "CHA", "long": "Charisma"}
+    "Ancestry": {
+        "1000": {
+            "id": 1000,
+            "title": "Dragonborn",
+            "description":"PH",
+            "traits": [
+                {"title": "Draconic Ancestry", "id": 2000}, 
+                {"title": "Breath Weapon", "id": 2001}, 
+                {"title": "Damage Resistance", "id": 2002}
+            ]
+        },
+        "1001": {
+            "id": 1001,
+            "title": "Hill Dwarf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Dwarven Resilience", "id": 2004}, 
+                {"title": "Dwarven Combat Training", "id": 2005}, 
+                {"title": "Tool Proficiency", "id": 2006}, 
+                {"title": "Stonecunning", "id": 2007}, 
+                {"title": "Dwarven Toughness", "id": 2003}
+            ]
+        },
+        "1002": {
+            "id": 1002,
+            "title": "Mountain Dwarf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Dwarven Resilience", "id": 2004}, 
+                {"title": "Dwarven Combat Training", "id": 2005}, 
+                {"title": "Tool Proficiency", "id": 2006}, 
+                {"title": "Stonecunning", "id": 2007}, 
+                {"title": "Dwarven Toughness", "id": 2003}
+            ]
+        },
+        "1003": {
+            "id": 1003,
+            "title": "Eladrin Elf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003},
+                {"title": "Keen Senses", "id": 2009},
+                {"title": "Fey Ancestry", "id": 2010},
+                {"title": "Trance", "id": 2011},
+                {"title": "Elf Weapon Training", "id": 2012},
+                {"title": "Fey Step", "id": 2013}
+            ]
+        },
+        "1004": {
+            "id": 1004,
+            "title": "High Elf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Keen Senses", "id": 2009}, 
+                {"title": "Fey Ancestry", "id": 2010},
+                {"title": "Trance", "id": 2011},
+                {"title": "Elf Weapon Training", "id": 2012},
+                {"title": "Cantrip", "id": 2014}
+            ]
+        },
+        "1005": {
+            "id": 1005,
+            "title": "Wood Elf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003},
+                {"title": "Keen Senses", "id": 2009},
+                {"title": "Fey Ancestry", "id": 2010},
+                {"title": "Trance", "id": 2011},
+                {"title": "Elf Weapon Training", "id": 2012},
+                {"title": "Fleet of Foot", "id": 2015},
+                {"title": "Mask of the Wild", "id": 2016}
+            ]
+        },
+        "1006": {
+            "id": 1006,
+            "title": "Half Elf",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003},
+                {"title": "Fey Ancestry", "id": 2010},
+                {"title": "Skill Versatility", "id": 2017}
+            ]
+        },
+        "1007": {
+            "id": 1007,
+            "title": "Half Orc",
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003},
+                {"title": "Menacing", "id": 2018},
+                {"title": "Relentless Endurance", "id": 2019},
+                {"title": "Savage Attacks", "id": 2020}
+            ]
+        },
+        "1008": {
+            "id": 1008,
+            "title": "Lightfoot Halfing",
+            "description":"PH",
+            "traits": [
+                {"title": "Lucky", "id": 2021},
+                {"title": "Brave", "id": 2022},
+                {"title": "Halfling Nimbleness", "id": 2023},
+                {"title": "Naturally Stealthy", "id": 2024}
+            ]
+        },
+        "1009": {
+            "id": 1009, 
+            "title": "Stout Halfing", 
+            "description":"PH",
+            "traits": [
+                {"title": "Lucky", "id": 2021},
+                {"title": "Brave", "id": 2022},
+                {"title": "Halfling Nimbleness", "id": 2023},
+                {"title": "Stout Resilience", "id": 2025}
+            ]
+        },
+        "1010": {
+            "id": 1010, 
+            "title": "Human",
+            "description":"PH",
+            "traits": [
+                {"title": "+1 to All Ability Scores", "id": 2026},
+                {"title": "Extra Language", "id": 2027}
+            ]
+        },
+        "1011":{
+            "id": 1011, 
+            "title": "Variant Human", 
+            "description":"PH",
+            "traits": [
+                {"title": "Skills", "id": 2028},
+                {"title": "Feat", "id": 2029}
+            ]
+        },
+        "1012": {
+            "id": 1012, 
+            "title": "Rock Gnome", 
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Gnome Cunning", "id": 2030}, 
+                {"title": "Artificer's Lore", "id": 2031}, 
+                {"title": "Tinker", "id": 2032}
+            ]
+        },
+        "1013": {
+            "id": 1013, 
+            "title": "Tiefling", 
+            "description":"PH",
+            "traits": [
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Hellish Resistance", "id": 2033}, 
+                {"title": "Infernal Legacy", "id": 2034}
+            ]
+        },
+        "1014": {
+            "id": 1014, 
+            "title": "Variant Aasimar", 
+            "description":"PH",
+            "traits": [
+                {"title": "Healing Hands", "id": 2035}, 
+                {"title": "Darkvision", "id": 2003}, 
+                {"title": "Celestial Resistance", "id": 2036}, 
+                {"title": "Celestial Legacy", "id": 2037}
+            ]
+        },
+        "999": {
+            "id": 1, 
+            "title": "placeholder",
+            "description":"PH",
+            "traits": []
+        }
+    },
+    "Trait": [
+        {"id": 2000, "title": "Draconic Ancestry", "type": "PH", "description": "PH"},
+        {"id": 2001, "title": "Breath Weapon", "type": "PH", "description": "PH"},
+        {"id": 2002, "title": "Damage Resistance", "type": "PH", "description": "PH"},
+        {"id": 2003, "title": "Darkvision", "type": "PH", "description": "PH"},
+        {"id": 2004, "title": "Dwarven Resilience", "type": "PH", "description": "PH"},
+        {"id": 2005, "title": "Dwarven Combat Training", "type": "PH", "description": "PH"},
+        {"id": 2006, "title": "Tool Proficiency", "type": "PH", "description": "PH"},
+        {"id": 2007, "title": "Stonecunning", "type": "PH", "description": "PH"},
+        {"id": 2008, "title": "Dwarven Toughness", "type": "PH", "description": "PH"},
+        {"id": 2009, "title": "Keen Senses", "type": "PH", "description": "PH"},
+        {"id": 2010, "title": "Fey Ancestry", "type": "PH", "description": "PH"},
+        {"id": 2011, "title": "Trance", "type": "PH", "description": "PH"},
+        {"id": 2012, "title": "Elf Weapon Training", "type": "PH", "description": "PH"},
+        {"id": 2013, "title": "Fey Step", "type": "PH", "description": "PH"},
+        {"id": 2014, "title": "Cantrip", "type": "PH", "description": "PH"},
+        {"id": 2015, "title": "Fleet of Foot", "type": "PH", "description": "PH"},
+        {"id": 2016, "title": "Mask of the Wild", "type": "PH", "description": "PH"},
+        {"id": 2017, "title": "Skill Versatility", "type": "PH", "description": "PH"},
+        {"id": 2018, "title": "Menacing", "type": "PH", "description": "PH"},
+        {"id": 2019, "title": "Relentless Endurance", "type": "PH", "description": "PH"},
+        {"id": 2020, "title": "Savage Attacks", "type": "PH", "description": "PH"},
+        {"id": 2021, "title": "Lucky", "type": "PH", "description": "PH"},
+        {"id": 2022, "title": "Brave", "type": "PH", "description": "PH"},
+        {"id": 2023, "title": "Halfling Nimbleness", "type": "PH", "description": "PH"},
+        {"id": 2024, "title": "Naturally Stealthy", "type": "PH", "description": "PH"},
+        {"id": 2025, "title": "Stout Resilience", "type": "PH", "description": "PH"},
+        {"id": 2026, "title": "+1 to All Ability Scores", "type": "PH", "description": "PH"},
+        {"id": 2027, "title": "Extra Language", "type": "PH", "description": "PH"},
+        {"id": 2028, "title": "Skills", "type": "PH", "description": "PH"},
+        {"id": 2029, "title": "Feat", "type": "PH", "description": "PH"},
+        {"id": 2030, "title": "Gnome Cunning", "type": "PH", "description": "PH"},
+        {"id": 2031, "title": "Artificer's Lore", "type": "PH", "description": "PH"},
+        {"id": 2032, "title": "Tinker", "type": "PH", "description": "PH"},
+        {"id": 2033, "title": "Hellish Resistance", "type": "PH", "description": "PH"},
+        {"id": 2034, "title": "Infernal Legacy", "type": "PH", "description": "PH"},
+        {"id": 2035, "title": "Healing Hands", "type": "PH", "description": "PH"},
+        {"id": 2036, "title": "Celestial Resistance", "type": "PH", "description": "PH"},
+        {"id": 2037, "title": "Celestial Legacy", "type": "PH", "description": "PH"},
+        {"id": 2038, "title": "Rage", "type": "PH", "description": "PH"},
+        {"id": 2039, "title": "Unarmored Defense", "type": "PH", "description": "PH"},
+        {"id": 2040, "title": "Barbarian Proficiencies", "type": "PH", "description": "PH"},
+        {"id": 2041, "title": "Barbarian Hit Points", "type": "PH", "description": "PH"},
+        {"id": 2042, "title": "Reckless Attack", "type": "PH", "description": "PH"},
+        {"id": 2043, "title": "Danger Sense", "type": "PH", "description": "PH"},
+        {"id": 2044, "title": "Primal Path", "type": "PH", "description": "PH"},
+        {"id": 2045, "title": "Ability Score Improvement", "type": "PH", "description": "PH"},
+        {"id": 2046, "title": "Extra Attack", "type": "PH", "description": "PH"},
+        {"id": 2047, "title": "Fast Movement", "type": "PH", "description": "PH"},
+        {"id": 2048, "title": "Feral Instinct", "type": "PH", "description": "PH"},
+        {"id": 2049, "title": "Brutal Critical", "type": "PH", "description": "PH"},
+        {"id": 2050, "title": "Relentless Rage", "type": "PH", "description": "PH"},
+        {"id": 2051, "title": "Persistant Rage", "type": "PH", "description": "PH"},
+        {"id": 2052, "title": "Indomitable Might", "type": "PH", "description": "PH"},
+        {"id": 2053, "title": "Primal Champion", "type": "PH", "description": "PH"},
+        {"id": 1, "title": "placeholder", "type": "PH", "description": "PH"}
     ],
-    "Background": [
-        {"id": 0, "title": "Acolyte", "feature": "Shelter of the Faithful"},
-        {"id": 1, "title": "Criminal", "feature": "Criminal Contract"},
-        {"id": 2, "title": "Spy", "feature": "Criminal Contract"},
-        {"id": 3, "title": "Folk Hero", "feature": "Rustic Hospitality"},
-        {"id": 4, "title": "Noble", "feature": "Position of Privilege"},
-        {"id": 5, "title": "Sage", "feature": "Researcher"},
-        {"id": 6, "title": "Soldier", "feature": "Military Rank"}
-    ],
-    "Ancestry": [
-        {"id": 0, "title": "Dragonborn", "traits": [2,0,0,0,0,1], "feature_list": ["Draconic Ancestry", "Breath Weapon", "Damage Resistance"]},
-        {"id": 1, "title": "Dwarf", "traits": [0,0,2,0,0,0], "feature_list": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning"]},
-        {"id": 2, "title": "Elf", "traits": [0,2,0,0,0,0], "feature_list": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]},
-        {"id": 3, "title": "Gnome", "traits": [0,0,0,2,0,0], "feature_list": ["Darkvision", "Gnome Cunning"]},
-        {"id": 4, "title": "Half Elf", "traits": [0,0,0,0,0,2], "feature_list": ["Half Elf Extra Ability Score Bonus", "Darkvision", "Fey Ancestry", "Skill Versatility"]},
-        {"id": 5, "title": "Halfling", "traits": [0,2,0,0,0,0], "feature_list": ["Lucky", "Brave", "Halfling Nimbleness"]},
-        {"id": 6, "title": "Half Ork", "traits": [2,0,1,0,0,0], "feature_list": ["Darkvision", "Menacing", "Relentless Endurance", "Savage Attacks"]},
-        {"id": 7, "title": "Human", "traits": [1,1,1,1,1,1], "feature_list": ["Extra Language"]},
-        {"id": 8, "title": "Tiefling", "traits": [0,0,0,1,0,2], "feature_list": ["Darkvision", "Hellish Resistance", "Infernal Legacy"]}
-    ],
-    "Class": [
-        {"id": 0, "title": "Barbarian", "hitDie": "d12", "primaryAbility": ["STR"], "saves": ["STR", "CON"]},
-        {"id": 1, "title": "Bard", "hitDie": "d8", "primaryAbility": ["CHA"], "saves": ["DEX", "CHA"]},
-        {"id": 2, "title": "Cleric", "hitDie": "d8", "primaryAbility": ["WIS"], "saves": ["WIS", "CHA"]},
-        {"id": 3, "title": "Druid", "hitDie": "d8", "primaryAbility": ["WIS"], "saves": ["WIS", "INT"]},
-        {"id": 4, "title": "Fighter", "hitDie": "d10", "primaryAbility": ["STR", "CHA"], "saves": ["STR", "CON"]},
-        {"id": 5, "title": "Monk", "hitDie": "d8", "primaryAbility": ["DEX", "WIS"], "saves": ["STR", "DEX"]},
-        {"id": 6, "title": "Paladin", "hitDie": "d10", "primaryAbility": ["STR","CHA"], "saves": ["WIS","CHA"]},
-        {"id": 7, "title": "Ranger", "hitDie": "d10", "primaryAbility": ["DEX", "WIS"], "saves": ["STR", "DEX"]},
-        {"id": 8, "title": "Rogue", "hitDie": "d8", "primaryAbility": ["DEX"], "saves": ["DEX","INT"]},
-        {"id": 9, "title": "Sorcerer", "hitDie": "d6", "primaryAbility": ["CHA"], "saves": ["CON","CHA"]},
-        {"id": 10, "title": "Warlock", "hitDie": "d8", "primaryAbility": ["CHA"], "saves": ["STR", "DEX"]},
-        {"id": 11, "title": "Wizard", "hitDie": "d6", "primaryAbility": ["INT"], "saves": ["INT","WIS"]}
-    ],
+    "Class": {
+        "3000" : {
+            "id": 3000,
+            "title": "Barbarian",
+            "description": "PH",
+            "hitDie": "d12",
+            "primaryStat": ["STR"],
+            "saves": ["STR","CON"]
+        },
+        "3001" : {
+            "id": 3001,
+            "title": "Bard", 
+            "description": "PH",
+            "hitDie": "d8",
+            "primaryStat": ["CHA"],
+            "saves": ["DEX","CHA"]
+        },
+        "3002" : {
+            "id": 3002,
+            "title": "Cleric",
+            "description": "PH",
+            "hitDie": "d8",
+            "primaryStat": ["WIS"],
+            "saves": ["WIS","CHA"]
+        },
+        "3003" : {
+            "id": 3003,
+            "title": "Druid",
+            "description": "PH", 
+            "hitDie": "d8",
+            "primaryStat": ["WIS"],
+            "saves": ["WIS","INT"]
+        },
+        "3004" : {
+            "id": 3004,
+            "title": "Fighter",
+            "description": "PH",
+            "hitDie": "d10",
+            "primaryStat": ["STR","CHA"],
+            "saves": ["STR","CON"]
+        },
+        "3005" : {
+            "id": 3005,
+            "title": "Monk",
+            "description": "PH",
+            "hitDie": "d8",
+            "primaryStat": ["DEX","WIS"],
+            "saves": ["STR","DEX"]
+        },
+        "3006" : {
+            "id": 3006,
+            "title": "Paladin",
+            "description": "PH",
+            "hitDie": "d10",
+            "primaryStat": ["STR","CHA"],
+            "saves": ["WIS","CHA"]
+        },
+        "3007" : {
+            "id": 3007,
+            "title": "Ranger",
+            "description": "PH",
+            "hitDie": "d10",
+            "primaryStat": ["DEX","WIS"],
+            "saves": ["STR","STR"]
+        },
+        "3008" : {
+            "id": 3008,
+            "title": "Rogue",
+            "description": "PH",
+            "hitDie": "d8",
+            "primaryStat": ["DEX"],
+            "saves": ["DEX","INT"]
+        },
+        "3009" : {
+            "id": 3009,
+            "title": "Sorcerer",
+            "description": "PH",
+            "hitDie": "d6",
+            "primaryStat": ["CHA"],
+            "saves": ["CON","CHA"]
+        },
+        "3010" : {
+            "id": 3010,
+            "title": "Warlock",
+            "description": "PH",
+            "hitDie": "d8",
+            "primaryStat": ["CHA"],
+            "saves": ["STR","DEX"]
+        },
+        "3011" : {
+            "id": 3011,
+            "title": "Wizard",
+            "description": "PH",
+            "hitDie": "d6",
+            "primaryStat": ["INT"],
+            "saves": ["INT","WIS"]
+        }
+    },
+    "Background": {
+        "4000": {
+            "id": 4000,
+            "title": "Acolyte",
+            "description": "PH",
+            "feature": "Shelter of the Faithful"
+        },
+        "4001": {
+            "id": 4001, 
+            "title": "Criminal",
+            "description": "PH",
+            "feature": "Criminal Contract"
+        },
+        "4002": {
+            "id": 4002, 
+            "title": "Spy",
+            "description": "PH",
+            "feature": "Criminal Contract"
+        },
+        "4003": {
+            "id": 4003,
+            "title": "Folk Hero",
+            "description": "PH",
+            "feature": "Rustic Hospitality"
+        },
+        "4004": {
+            "id": 4004,
+            "title": "Noble",
+            "description": "PH",
+            "feature": "Position of Privilege"
+        },
+        "4005": {
+            "id": 4005,
+            "title": "Sage",
+            "description": "PH",
+            "feature": "Researcher"
+        },
+        "4006": {
+            "id": 4006,
+            "title": "Soldier",
+            "description": "PH",
+            "feature": "Military Rank"
+        }
+    },  
     "Skills": [
         {"id": 0, "title": "Athletics", "stat": "STR"},
         {"id": 1, "title": "Acrobatics", "stat": "DEX"},
@@ -60,5 +394,13 @@
         {"id": 15, "title": "Intimidation", "stat": "CHA"},
         {"id": 16, "title": "Performance", "stat": "CHA"},
         {"id": 17, "title": "Persuasion", "stat": "CHA"}
+    ],
+    "Ability": [
+        {"id": 0, "short": "STR", "long": "Strength"},
+        {"id": 1, "short": "DEX", "long": "Dexterity"},
+        {"id": 2, "short": "CON", "long": "Constitution"},
+        {"id": 3, "short": "INT", "long": "Intelligence"},
+        {"id": 4, "short": "WIS", "long": "Wisdom"},
+        {"id": 5, "short": "CHA", "long": "Charisma"}
     ]
 }

@@ -1,88 +1,26 @@
-.app{
-	background-color: lightblue;
-	display:grid;
-	margin:auto;
-	grid-template-rows: 1.5fr repeat(5, auto);
-	grid-template-columns: 1fr 8fr 1fr;
-	max-width: 1000px;
-}
-.app_title{
-	background-color:lightcoral;
-	margin: 5px;
-	grid-row: 1;
-	grid-column: 2;
-
-}
-.app_race {
-	background-color:lightgoldenrodyellow;
-	margin: 5px;
-	grid-row: 2;
-	grid-column: 2;
-
-}
-.app_class {
-	background-color: lightgray;
-	margin: 5px;
-	grid-row: 3;
-	grid-column: 2;
-}
-.app_stat {
-	background-color: lightgreen;
-	margin: 5px;
-	grid-row: 4;
-	grid-column: 2;
-}
-.app_back {
-	background-color: lightpink;
-	margin: 5px;
-	grid-row: 5;
-	grid-column: 2;
-}
-.app_equip {
-	background-color: lightseagreen;
-	margin: 5px;
-	grid-row: 6;
-	grid-column: 2;
-}
-
-.selectComponent {
+.characterComponent{
+	background-color: lightcyan;
+	padding: 5px;
 	margin: 2px;
-	background-color: lightgreen;
-	text-align: center;
 }
-.selectTitle {
-	font-weight: bold;
-	font-size: 1.2em;
-}
-.selectMinorTitle {
-	font-weight: bold;
-	font-size: .9em;
-}
-.selectGrid {
-	display:grid;
+.gridContainer{
+	background-color: lightskyblue;
+	padding: 2px;
 	margin: 2px;
+
+	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 
-	background: lightcoral;
 }
-.selectGridMember{
+.gridObject{
+	background-color: lightgrey;
+	padding: 2px;
 	margin: 2px;
-	font-size: .7em;
-	background-color: lightcyan;
 }
-
-.componentTitle{
-
+.gridTitle{
+	font-weight: bold;
+	font-size: 1.1em;
 }
-.componentInfo{
-
-}
-.componentQuickActions{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-}
-.componentBody{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+.gridData{
+	font-size: .9em;
 }
